@@ -1,4 +1,4 @@
-prices = [7,1,5,3,6,4]
+prices = [7,5,3,6,4,1]
 min_price=prices[0]
 max_profit=0
 for price in prices:
