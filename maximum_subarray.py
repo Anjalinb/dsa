@@ -6,15 +6,15 @@ current=best=nums[0]
 
 for i in range(1,len(nums)):
     x=nums[i]
-    if x>current+x:
+    if x>current+x:     #restart is better
         current=x
         start=i
     else:
-        current+=x
+        current+=x      #extend
     if current>best:
         best=current
         best_start,best_end=start,i
 
 print(nums[best_start:best_end+1])
 print(best)
-    
+  
