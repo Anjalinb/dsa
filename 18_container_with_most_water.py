@@ -9,3 +9,16 @@ Return the maximum amount of water a container can store.
 Notice that you may not slant the container.
 """
 height = [1,8,6,2,5,4,8,3,7]
+
+l=0
+r=len(height)-1
+best=0
+while l<r:
+    h=min(height[l],height[r])
+    best=max(best,h*(r-l))
+    if height[l]<height[r]:
+        l+=1
+    else:
+        r-=1
+
+print(best)
